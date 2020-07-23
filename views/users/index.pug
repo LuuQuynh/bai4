@@ -1,0 +1,27 @@
+extends ../layout/common.pug
+
+block content
+    h1 USERS
+    button.btn.btn-light
+        a(href="/views/users/create") Create
+    form.form-inline.my-2.my-lg-0(action="/views/users/search",method="GET")
+        input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search',name='q')
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+    
+    table.table.table-striped.table-dark
+        thead
+            tr
+            th(scope='col') Name
+            th(scope='col') Phone
+            th(scope='col') Imformation
+        each user in users
+            tbody
+                tr
+                td=user.name
+                td=user.phone
+                td
+                    a(href="/views/users/"+user.id) Views
+                        
+                              
+
+                        

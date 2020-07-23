@@ -1,0 +1,14 @@
+extends ../layout/common.pug
+
+block content
+    h1 create user
+    if errors
+        each error in errors
+            .alert.alert-danger=error
+    form.form-inline.my-2.my-lg-0(action="/views/users/create",method="POST")
+        label Name
+        input.form-control.mr-sm-2(type='text', placeholder='Create Name',name='name',value=values ? values.name : "")
+        br
+        label Phone
+        input.form-control.mr-sm-2(type='text', placeholder='create phone ',name='phone',value=values ? values.phone:"")
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Create
