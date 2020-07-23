@@ -42,20 +42,6 @@ module.exports.create_id=function (req, res) {
 }
 module.exports.post_create=function (req, res) {
     req.body.id=shortid.generate();
-    var errors=[];
-    if(!req.body.name){
-      errors.push("vui lòng nhập tên")
-    }
-    if(!req.body.phone){
-      errors.push("vui lòng nhập điện thoại")
-    }
-    if(errors.length){
-      res.render("views/users/create",{
-        errors:errors,
-        values:req.body
-      });
-      return;
-    }
    db.get("users").push(req.body).write();
    res.redirect("/views/users");
 }
