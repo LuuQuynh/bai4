@@ -18,12 +18,21 @@
     {
       "name": "huong",
       "phone": " 037xxxxxxx",
-      "id": "lBsEieLiS"
+      "id": "lBsEieLiS",
+      "email": "quynhruby100698@gmail.com",
+      "password": "123456"
     },
     {
       "name": "luu tuan anh",
       "phone": "0365000039",
-      "id": "5bs9_m12X"
+      "id": "5bs9_m12X",
+      "email": "quynhlt620@wru.vn",
+      "password": "123456"
+    },
+    {
+      "name": "huong",
+      "phone": "0373192896",
+      "id": "IEQo7npvy"
     }
   ]
 }
