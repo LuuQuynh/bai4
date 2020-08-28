@@ -8,15 +8,18 @@ block content
         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search',name='q')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
     
-    table.table.table-striped.table-dark
+    table.table.table-striped
         thead
             tr
+            th(scope='col') Avatar
             th(scope='col') Name
             th(scope='col') Phone
             th(scope='col') Imformation
         each user in users
             tbody
                 tr
+                td
+                    img(src="/"+user.avatar,style="width:32")
                 td=user.name
                 td=user.phone
                 td

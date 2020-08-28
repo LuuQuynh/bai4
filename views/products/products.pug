@@ -1,0 +1,18 @@
+extends ../layout/common.pug
+
+block content
+    h2.product Product
+        form.form-inline.my-2.my-lg-0(action="",method="GET")
+            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search',name='q')
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+    .row
+      each product in products
+        .col-sm-3
+            .card
+                .card-body
+                    img(src=product.image, alt='#')
+                    p.card-text= product.name
+                    p.card-text.description= product.description
+                    a.btn.btn-primary(href='/cart/add/:'+products.id) Go buy
+        
+        
