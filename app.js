@@ -9,7 +9,7 @@ var authRoutes=require("./routes/auth.route")
 var productRoutes=require("./routes/product.route")
 var middleware=require("./middleware/auth.middleware")
 var sessionmiddleware=require("./middleware/session.middleware")
-var carRoutes=require('./routes/cart.route')
+var cartRoutes=require('./routes/cart.route')
 app.set("view engine", "pug");
 app.set("views", "./");
 
@@ -30,7 +30,7 @@ app.get("/views", function (req, res) {
 app.use('/views/users',middleware.requireAuth,userRoutes)
 app.use('/views/auth',authRoutes)
 app.use('/views/products',productRoutes)
-app.use('/cart',carRoutes)
+app.use('/views/cart',cartRoutes)
 app.listen(port, function () {
   console.log("server running port " + port);
 });
